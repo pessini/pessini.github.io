@@ -7351,39 +7351,39 @@ textarea.form-control-lg {
 
 /* rtl:end:remove */
 .text-primary {
-  color: #1abc9c !important;
+  color: var(--bs-primary) !important;
 }
 
 .text-secondary {
-  color: #2c3e50 !important;
+  color: var(--bs-secondary) !important;
 }
 
 .text-success {
-  color: #198754 !important;
+  color: var(--bs-success) !important;
 }
 
 .text-info {
-  color: #0dcaf0 !important;
+  color: var(--bs-info) !important;
 }
 
 .text-warning {
-  color: #ffc107 !important;
+  color: var(--bs-warning) !important;
 }
 
 .text-danger {
-  color: #dc3545 !important;
+  color: var(--bs-danger) !important;
 }
 
 .text-light {
-  color: #f8f9fa !important;
+  color: var(--bs-light) !important;
 }
 
 .text-dark {
-  color: #212529 !important;
+  color: var(--bs-dark) !important;
 }
 
 .text-white {
-  color: #fff !important;
+  color: var(--bs-white) !important;
 }
 
 .text-body {
