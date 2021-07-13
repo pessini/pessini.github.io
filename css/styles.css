@@ -2998,27 +2998,27 @@ textarea.form-control-lg {
 }
 .btn-secondary:hover {
   color: var( --bs-white);
-  background-color: var( --bs-primary);
-  border-color:var( --bs-primary);
+  background-color: var( --bs-gray-dark);
+  border-color:var( --bs-gray-dark);
 }
 .btn-check:focus + .btn-secondary, .btn-secondary:focus {
   color: var( --bs-white);
-  background-color: var( --bs-primary);
-  border-color:var( --bs-primary);
+  background-color: var( --bs-gray-dark);
+  border-color:var( --bs-gray-dark);
   box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
 }
 .btn-check:checked + .btn-secondary, .btn-check:active + .btn-secondary, .btn-secondary:active, .btn-secondary.active, .show > .btn-secondary.dropdown-toggle {
   color: var( --bs-white);
-  background-color: var( --bs-primary);
-  border-color:var( --bs-primary);
+  background-color: var( --bs-gray-dark);
+  border-color:var( --bs-gray-dark);
 }
 .btn-check:checked + .btn-secondary:focus, .btn-check:active + .btn-secondary:focus, .btn-secondary:active:focus, .btn-secondary.active:focus, .show > .btn-secondary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
 }
 .btn-secondary:disabled, .btn-secondary.disabled {
   color: var( --bs-white);
-  background-color: var( --bs-primary);
-  border-color:var( --bs-primary);
+  background-color: var( --bs-gray-dark);
+  border-color:var( --bs-gray-dark);
 }
 
 .btn-success {
