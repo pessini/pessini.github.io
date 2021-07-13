@@ -2968,8 +2968,8 @@ textarea.form-control-lg {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #0b5ed7;
-  border-color: #0a58ca;
+  background-color: var( --bs-primary);
+  border-color:var( --bs-primary);
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
