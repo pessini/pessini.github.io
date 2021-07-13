@@ -22,7 +22,7 @@
   --bs-teal: #1abc9c;
   --bs-cyan: #0dcaf0;
   --bs-white: #fff;
-  --bs-gray: #6c757d;
+  --bs-gray: #F8F9FA;
   --bs-gray-dark: #343a40;
   --bs-primary: #252323;
   --bs-secondary: #98918D;
@@ -7412,6 +7412,10 @@ textarea.form-control-lg {
 
 .bg-secondary {
   background-color: var(--bs-secondary) !important;
+}
+
+.bg-gray {
+  background-color: var(--bs-gray) !important;
 }
 
 .bg-success {
