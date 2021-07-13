@@ -2962,13 +2962,13 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #fff;
+  color: var( --bs-white);
   background-color: var( --bs-primary);
-  border-color: var( --bs-primary);
+  border-color:var( --bs-primary);
 }
 .btn-primary:hover {
-  color: #fff;
-  background-color: var( --bs-primary);
+  color: var( --bs-primary);
+  background-color: var( --bs-white);
   border-color:var( --bs-primary);
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
