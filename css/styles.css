@@ -572,7 +572,7 @@ progress {
 
 .portrait {
   /*display: inline-block; */
-  width: 20rem;
+  max-width: 20rem;
 }
 
 .img-fluid {
