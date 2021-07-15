@@ -2970,11 +2970,11 @@ textarea.form-control-lg {
   color: var( --bs-white);
   background-color: var( --bs-primary);
   border-color:var( --bs-primary);
+  opacity: 0.9;
 }
 .btn-primary:hover {
-  color: var( --bs-primary);
-  background-color: var( --bs-white);
-  border-color:var( --bs-white);
+  color: var( --bs-white);
+  opacity: 1;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -3000,11 +3000,11 @@ textarea.form-control-lg {
   color: var( --bs-primary);
   background-color: var( --bs-white);
   border-color:var( --bs-white);
+  opacity: 0.9;
 }
 .btn-secondary:hover {
-  color: var( --bs-white);
-  background-color: var( --bs-gray-dark);
-  border-color:var( --bs-gray-dark);
+  color: var( --bs-primary);
+  opacity: 1;
 }
 .btn-check:focus + .btn-secondary, .btn-secondary:focus {
   color: var( --bs-white);
@@ -4669,13 +4669,14 @@ textarea.form-control-lg {
   display: inline-block;
   padding: 0.35em 0.65em;
   font-size: 0.75em;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1;
   color: #fff;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25rem;
+  opacity: 0.9;
 }
 .badge:empty {
   display: none;
@@ -5177,6 +5178,11 @@ textarea.form-control-lg {
   bottom: 20px;
   right: 20px;
   display: none;
+}
+
+#btn-back-to-top:hover {
+  opacity: 0.9;
+  color: white;
 }
 
 .btn-close {
@@ -10887,6 +10893,7 @@ html {
   height: 3rem;
   width: 3rem;
   font-size: 1.5rem;
+  /*opacity: 0.95;*/
 }
 
 .bg-featured-blog {
