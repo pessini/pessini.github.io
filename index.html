@@ -320,13 +320,11 @@
                     </div>
                 </div>
             </section>
-
-             <!-- Scroll to Top Button-->
-            <div id="btnTop" class="fixed-action-btn smooth-scroll" style="bottom: 45px; right: 24px;display: none;">
-              <a href="#page-top" class="btn-floating btn-large red">
-                <i class="fa fa-arrow-up"></i>
-              </a>
-            </div>
+            
+            <!-- Back to top button -->
+            <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+              <i class="fas fa-arrow-up"></i>
+            </button>
 
         </main>
 
@@ -347,19 +345,31 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script type="text/javascript">
-            $(function() {
-              var $btn = $('#btnTop');
-              var $home = $('#page-top');
-              var startpoint = $home.scrollTop() + $home.height();
-              
-              $(window).on('scroll', function() {
-                if($(window).scrollTop() > startpoint) {
-                  $btn.show();
-                } else {
-                  $btn.hide();
-                }
-              });
-            });
+            //Get the button
+            let mybutton = document.getElementById("btn-back-to-top");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+              scrollFunction();
+            };
+
+            function scrollFunction() {
+              if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+              ) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            mybutton.addEventListener("click", backToTop);
+
+            function backToTop() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
         </script>
     </body>
 </html>
