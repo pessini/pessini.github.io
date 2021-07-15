@@ -346,5 +346,20 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script type="text/javascript">
+            $(function() {
+              var $btn = $('#btnTop');
+              var $home = $('#page-top');
+              var startpoint = $home.scrollTop() + $home.height();
+              
+              $(window).on('scroll', function() {
+                if($(window).scrollTop() > startpoint) {
+                  $btn.show();
+                } else {
+                  $btn.hide();
+                }
+              });
+            });
+        </script>
     </body>
 </html>
