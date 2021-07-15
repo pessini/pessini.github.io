@@ -4288,6 +4288,15 @@ textarea.form-control-lg {
   box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
 }
 
+.card:hover .see_more {
+  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  opacity: 1;
+}
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
