@@ -2984,7 +2984,7 @@ textarea.form-control-lg {
 }
 .btn-primary:hover {
   color: var( --bs-white);
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -4690,7 +4690,7 @@ textarea.form-control-lg {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25rem;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 .badge:empty {
   display: none;
