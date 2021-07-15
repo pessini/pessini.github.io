@@ -566,7 +566,11 @@ progress {
   content: "— ";
 }
 
-
+.portrait {
+  display: inline-block; 
+  max-width: 15rem; 
+  max-height: 15rem;
+}
 
 .img-fluid {
   max-width: 100%;
