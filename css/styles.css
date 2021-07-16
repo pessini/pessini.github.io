@@ -4261,7 +4261,6 @@ textarea.form-control-lg {
 }
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
   color: var( --bs-primary);
-  font-weight: bolder;
 }
 .navbar-dark .navbar-nav .nav-link.disabled {
   color: rgba(255, 255, 255, 0.25);
