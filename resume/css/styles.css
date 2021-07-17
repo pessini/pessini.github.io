@@ -10894,7 +10894,7 @@ h1, .h1 {
 }
 
 p.lead {
-  font-size: 1.15rem;
+  font-size: inherit;
   font-weight: 400;
 }
 
