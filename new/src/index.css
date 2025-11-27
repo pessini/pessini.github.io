@@ -1,0 +1,70 @@
+:root {
+  /* Colors */
+  --bg-color: #eef2f6;
+  --card-bg: #ffffff;
+
+  /* Sidebar Colors */
+  --sidebar-bg: #111827;
+  /* Dark sidebar */
+  --sidebar-text: #f3f4f6;
+  --sidebar-text-muted: #9ca3af;
+
+  /* Accent Colors */
+  --primary-color: #0A696D;
+  /* Logo Green */
+  --secondary-color: #26A69A;
+  /* Lighter Teal for gradients */
+
+  /* Text Colors */
+  --text-main: #1f2937;
+  --text-secondary: #4b5563;
+
+  /* Fonts */
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+
+  /* UI Elements */
+  --border-radius: 24px;
+  --shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+  --sidebar-width: 340px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
