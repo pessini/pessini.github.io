@@ -12,7 +12,7 @@ const Contact = () => {
             <div className="contact-content">
                 <div className="contact-message-container">
                     <h2 className="contact-message">
-                        Drop me an email and let's discuss how we can collaborate.
+                        Let's discuss how we can collaborate.
                     </h2>
 
                     <a href="mailto:leandro@pessini.me" className="contact-btn">
