@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Loader from './components/Loader';
 import './App.css';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('about');
-  const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -24,46 +22,37 @@ function App() {
     setDarkMode(!darkMode);
   };
 
-  const renderContent = () => {
-    switch (activeTab) {
-      case 'about':
-        return <About />;
-      case 'projects':
-        return <Projects />;
-      case 'contact':
-        return <Contact />;
-      default:
-        return <About />;
-    }
-  };
-
   return (
-    <>
-      {loading && <Loader onFinish={() => setLoading(false)} />}
-      {!loading && (
-        <div className={`app-container fade-in ${darkMode ? 'dark' : ''}`}>
-          <div className="main-content-wrapper">
-            <header className="site-header">
-              <div className="logo-container-header">
-                <img src="/Logo-dark.svg" alt="Leandro Pessini" className="site-logo" />
-              </div>
-              <Navbar
-                activeTab={activeTab}
-                setActiveTab={setActiveTab}
-                darkMode={darkMode}
-                toggleDarkMode={toggleDarkMode}
-              />
-            </header>
-
-            <main className="page-content">
-              {renderContent()}
-            </main>
-
-            <Footer />
-          </div>
+    <BrowserRouter>
+      <div className={`app-container ${darkMode ? 'dark' : ''}`}>
+        <div className="header-wrapper">
+          <header className="site-header">
+            <div className="logo-container-header">
+              <Link to="/about" style={{ display: 'flex', alignItems: 'center' }}>
+                <img src={darkMode ? "/Logo-dark.svg" : "/Logo-light.svg"} alt="Leandro Pessini" className="site-logo" />
+              </Link>
+            </div>
+            <Navbar
+              darkMode={darkMode}
+              toggleDarkMode={toggleDarkMode}
+            />
+          </header>
         </div>
-      )}
-    </>
+
+        <div className="main-content-wrapper">
+          <main className="page-content">
+            <Routes>
+              <Route path="/" element={<Navigate to="/about" replace />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+
+          <Footer />
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

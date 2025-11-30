@@ -1,24 +1,26 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { FaUser, FaCode, FaEnvelope, FaSun, FaMoon, FaDownload } from 'react-icons/fa';
 
-const Navbar = ({ activeTab, setActiveTab, darkMode, toggleDarkMode }) => {
+const Navbar = ({ darkMode, toggleDarkMode }) => {
+    const location = useLocation();
     const tabs = [
-        { id: 'about', label: '01. About me', icon: <FaUser /> },
-        { id: 'projects', label: '02. Projects', icon: <FaCode /> },
-        { id: 'contact', label: '03. Contact', icon: <FaEnvelope /> },
+        { id: 'about', path: '/about', label: '01. About me', icon: <FaUser /> },
+        { id: 'projects', path: '/projects', label: '02. Projects', icon: <FaCode /> },
+        { id: 'contact', path: '/contact', label: '03. Contact', icon: <FaEnvelope /> },
     ];
 
     return (
         <div className="navbar-container">
             <div className="navbar">
                 {tabs.map((tab) => (
-                    <button
+                    <Link
                         key={tab.id}
-                        className={`nav-item ${activeTab === tab.id ? 'active' : ''}`}
-                        onClick={() => setActiveTab(tab.id)}
+                        to={tab.path}
+                        className={`nav-item ${location.pathname === tab.path ? 'active' : ''}`}
                     >
                         <span className="nav-label">{tab.label}</span>
-                    </button>
+                    </Link>
                 ))}
             </div>
 
