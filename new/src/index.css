@@ -34,8 +34,8 @@ body.dark-mode {
   --card-bg: #1e1e1e;
   --text-main: #e0e0e0;
   --text-secondary: #a0a0a0;
-  --primary-color: #64ffda;
-  --secondary-color: #64ffda;
+  --primary-color: #ffffff;
+  --secondary-color: #0A696D;
   --shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
 }
 
