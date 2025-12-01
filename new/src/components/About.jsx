@@ -10,10 +10,10 @@ const About = () => {
     const [typingSpeed, setTypingSpeed] = useState(150);
 
     const phrases = [
-        "I build things for the web.",
-        "I analyze data.",
-        "I create digital experiences.",
-        "I solve problems."
+        "I build AI solutions.",
+        "I find patterns in chaos.",
+        "I solve with data.",
+        "I turn data into decisions."
     ];
 
     useEffect(() => {
@@ -55,8 +55,7 @@ const About = () => {
 
                     <div className="hero-description">
                         <p>
-                            I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences.
-                            Currently, I'm focused on building accessible, human-centered products.
+                            Data Scientist and AI practitioner who merges software development expertise, strategic project management, and machine learning specialization to tackle complex business challenges.
                         </p>
                     </div>
                 </div>
