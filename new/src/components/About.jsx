@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { FaBrain, FaCode, FaDatabase, FaCloud } from 'react-icons/fa';
-import drawingImg from '../assets/Drawing.png';
+import drawingImg from '../assets/profile_pixel.png';
 
 const About = () => {
     const [text, setText] = useState('');
@@ -44,8 +44,7 @@ const About = () => {
         <div className="content-section fade-in">
             <div className="hero-section">
                 <div className="hero-content">
-                    <h4 className="hero-intro">Hi, my name is</h4>
-                    <h1 className="hero-name">Leandro Pessini.</h1>
+                    <h1 className="hero-name">Hi, I'm Leandro.</h1>
                     <div className="hero-tagline-container">
                         <h2 className="hero-tagline">
                             {text}
@@ -53,11 +52,11 @@ const About = () => {
                         </h2>
                     </div>
 
-                    <div className="hero-description">
+                    {/* <div className="hero-description">
                         <p>
-                            Data Scientist and AI practitioner who merges software development expertise, strategic project management, and machine learning specialization to tackle complex business challenges.
+                            With over 15 years of experience spanning software engineering, data science, and AI development, I build end-to-end machine learning solutions—from intelligent knowledge systems and agentic AI workflows to predictive models and automated pipelines—combining deep technical expertise with a proven ability to deliver measurable business impact.
                         </p>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="hero-image-container">
