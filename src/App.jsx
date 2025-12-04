@@ -52,6 +52,12 @@ function App() {
                             <img src={drawingImg} alt="Leandro Pessini" className="profile-image" />
                         </div>
                         <div className="contact-info">
+                            <div className="contact-social-links">
+                                <a href="https://www.linkedin.com/in/leandropessini/" target="_blank" className="contact-social-link"><FaLinkedin /></a>
+                                <a href="https://github.com/pessini" target="_blank" className="contact-social-link"><FaGithub /></a>
+                                <a href="https://pessini.medium.com/" target="_blank" className="contact-social-link"><FaMedium /></a>
+                            </div>
+                            {/* <div className="contact-divider"></div> */}
                             <div className="contact-item">
                                 <FaMapMarkerAlt className="contact-icon" />
                                 <span> Sao Paulo 🇧🇷 (GMT-3) </span>
@@ -60,6 +66,7 @@ function App() {
                                 <FaEnvelope className="contact-icon" />
                                 <a href="mailto:leandro@pessini.me">leandro@pessini.me</a>
                             </div>
+                            {/* <div className="contact-divider"></div> */}
                             <a href="https://www.dropbox.com/s/0khbcntugu3z5fo/Leandro-Pessini-CV-eng.pdf?dl=0" className="resume-button" target="_blank" rel="noopener noreferrer">
                                 <FaDropbox /> RESUME
                             </a>

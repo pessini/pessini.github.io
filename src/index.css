@@ -210,6 +210,32 @@ h6 {
     color: var(--accent-color);
 }
 
+/* Contact divider line */
+.contact-divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 0.2rem 0;
+}
+
+/* Smaller social links for contact section */
+.contact-social-links {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.contact-social-link {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.contact-social-link:hover {
+    color: var(--hover-color);
+}
+
 .resume-button {
     display: inline-flex;
     align-items: center;
@@ -221,7 +247,7 @@ h6 {
     text-decoration: none;
     font-size: 1.0rem;
     font-weight: 600;
-    margin-top: 1.5rem;
+    margin-top: 0.75rem;
     transition: all 0.2s ease;
     box-shadow: var(--shadow);
     align-self: center;
@@ -406,11 +432,11 @@ body.dark-mode .resume-button:hover {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    width: 60px;
-    height: 30px;
+    width: 40px;
+    height: 20px;
     background-color: var(--primary-color);
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
     padding: 0;
     transition: all 0.3s ease;
@@ -424,10 +450,10 @@ body.dark-mode .resume-button:hover {
 .theme-toggle::before {
     content: '☀️';
     position: absolute;
-    left: 8px;
+    left: 4px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 12px;
+    font-size: 9px;
     z-index: 1;
     filter: brightness(0) invert(1);
     transition: all 0.3s ease;
@@ -437,10 +463,10 @@ body.dark-mode .resume-button:hover {
 .theme-toggle::after {
     content: '🌙';
     position: absolute;
-    right: 8px;
+    right: 4px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 12px;
+    font-size: 9px;
     z-index: 1;
     filter: brightness(0) invert(1);
     transition: all 0.3s ease;
@@ -448,15 +474,15 @@ body.dark-mode .resume-button:hover {
 
 /* Toggle circle that slides and covers one icon */
 .toggle-circle {
-    width: 22px;
-    height: 22px;
+    width: 16px;
+    height: 16px;
     background-color: var(--bg-color);
     border-radius: 50%;
     position: absolute;
-    top: 4px;
-    left: 4px;
+    top: 2px;
+    left: 2px;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     z-index: 2;
 }
 
@@ -470,7 +496,7 @@ body.dark-mode .theme-toggle {
 }
 
 body.dark-mode .toggle-circle {
-    transform: translateX(30px);
+    transform: translateX(22px);
 }
 
 /* Responsive */
@@ -496,18 +522,18 @@ body.dark-mode .toggle-circle {
     .theme-toggle {
         top: 1rem;
         right: 1rem;
-        width: 50px;
-        height: 26px;
+        width: 40px;
+        height: 20px;
     }
 
     .toggle-circle {
-        width: 18px;
-        height: 18px;
-        top: 4px;
+        width: 16px;
+        height: 16px;
+        top: 2px;
     }
 
     body.dark-mode .toggle-circle {
-        transform: translateX(24px);
+        transform: translateX(22px);
     }
 
     .card {
