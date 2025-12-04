@@ -34,16 +34,6 @@ function App() {
                             <div className="hero-tagline-container">
                                 <TypingAnimation />
                             </div>
-
-                            <div className="about-me-section">
-                                <div className="section-header">
-                                    <h2>About Me</h2>
-                                    <div className="title-underline"></div>
-                                </div>
-                                <p className="about-text">
-                                    Former software engineer and PM turned data scientist and AI engineer — building end-to-end Machine Learning and AI solutions from raw data to real-world applications.
-                                </p>
-                            </div>
                         </div>
                     </div>
 
@@ -72,6 +62,17 @@ function App() {
                             </a>
                         </div>
                     </div>
+                </div>
+
+                {/* About Me */}
+                <div className="about-me-section">
+                    <div className="section-header">
+                        <h2>About Me</h2>
+                        <div className="title-underline"></div>
+                    </div>
+                    <p className="about-text">
+                        Former software engineer and PM turned data scientist and AI engineer — building end-to-end Machine Learning and AI solutions from raw data to real-world applications.
+                    </p>
                 </div>
 
                 {/* Tech Skills */}
