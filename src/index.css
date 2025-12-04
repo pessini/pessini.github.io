@@ -270,7 +270,8 @@ body.dark-mode .resume-button:hover {
     color: var(--hover-color) !important;
 }
 
-/* Tech Skills */
+/* About Me & Tech Skills */
+.about-me-section,
 .tech-skills-section {
     margin-top: 1rem;
 }
@@ -538,5 +539,18 @@ body.dark-mode .toggle-circle {
 
     .card {
         padding: 1.5rem;
+    }
+
+    .about-me-section,
+    .tech-skills-section {
+        margin-top: 2rem;
+    }
+
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.3rem;
     }
 }
