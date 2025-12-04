@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -23,7 +23,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter basename="/new">
+    <HashRouter>
       <div className={`app-container ${darkMode ? 'dark' : ''}`}>
         <div className="header-wrapper">
           <header className="site-header">
@@ -52,7 +52,7 @@ function App() {
           <Footer />
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
