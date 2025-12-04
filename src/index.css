@@ -541,16 +541,24 @@ body.dark-mode .toggle-circle {
         padding: 1.5rem;
     }
 
-    .about-me-section,
+    .about-me-section {
+        margin-top: 2rem;
+    }
+
     .tech-skills-section {
         margin-top: 2rem;
     }
 
     .section-header {
         margin-bottom: 1.5rem;
+        text-align: left;
     }
 
     .section-header h2 {
         font-size: 1.3rem;
+    }
+
+    .title-underline {
+        margin: 0;
     }
 }
