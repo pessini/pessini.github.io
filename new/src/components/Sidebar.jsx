@@ -5,7 +5,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="logo-container">
-        <img src="/Logo-dark.svg" alt="Logo" className="sidebar-logo" />
+        <img src={`${import.meta.env.BASE_URL}Logo-dark.svg`} alt="Logo" className="sidebar-logo" />
       </div>
       <div className="profile-container">
         <img

@@ -23,13 +23,13 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/new">
       <div className={`app-container ${darkMode ? 'dark' : ''}`}>
         <div className="header-wrapper">
           <header className="site-header">
             <div className="logo-container-header">
               <Link to="/about" style={{ display: 'flex', alignItems: 'center' }}>
-                <img src={darkMode ? "/Logo-dark.svg" : "/Logo-light.svg"} alt="Leandro Pessini" className="site-logo" />
+                <img src={darkMode ? `${import.meta.env.BASE_URL}Logo-dark.svg` : `${import.meta.env.BASE_URL}Logo-light.svg`} alt="Leandro Pessini" className="site-logo" />
               </Link>
             </div>
             <Navbar

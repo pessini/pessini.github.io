@@ -2,13 +2,14 @@ import React from 'react';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
 const Projects = () => {
+    const baseUrl = import.meta.env.BASE_URL;
     const projects = [
         {
             title: "Data Science Project",
             category: "Machine Learning / AWS",
             description: "An end-to-end project to optimize Operations team daily activities with real-time Dashboard & Demand Forecasting. Deployment on Streamlit and AWS.",
             tags: ["Machine Learning", "AWS", "Streamlit"],
-            image: "/assets/portfolio/streamlit-webapp_2.jpeg",
+            image: `${baseUrl}assets/portfolio/streamlit-webapp_2.jpeg`,
             link: "https://pessini.me/moby-bikes/",
             source: null
         },
@@ -17,7 +18,7 @@ const Projects = () => {
             category: "Spatial Analysis",
             description: "Spatial analysis on how Avian Influenza spreads providing insights on possible risky areas and wild birds species.",
             tags: ["Spatial Analysis", "R"],
-            image: "/assets/portfolio/choropleth_map.png",
+            image: `${baseUrl}assets/portfolio/choropleth_map.png`,
             link: "https://pessini.me/avian-flu-wild-birds-ireland/",
             source: null
         },
@@ -26,7 +27,7 @@ const Projects = () => {
             category: "R / Tableau",
             description: "Report on research funding and geographical distribution of grant awardees.",
             tags: ["R", "Tableau"],
-            image: "/assets/portfolio/awards-dist-dashboard.png",
+            image: `${baseUrl}assets/portfolio/awards-dist-dashboard.png`,
             link: "https://sfi-grants-and-awards.streamlit.app/",
             source: null
         },
@@ -34,7 +35,7 @@ const Projects = () => {
             title: "Gender differences in research grant applications",
             description: "Analysis on gender differences in research grants offered by SFI whether the award was accepted or declined by the applicant.",
             tags: ["R", "Tableau"],
-            image: "/assets/portfolio/gender-dashboard.png",
+            image: `${baseUrl}assets/portfolio/gender-dashboard.png`,
             link: "https://sfi-grants-and-awards.streamlit.app/",
             source: null
         }

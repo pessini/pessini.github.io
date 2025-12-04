@@ -1,27 +1,17 @@
-# Paper's files
-*.pages
-*.word
-*.yml
-
-# History files
-.Rhistory
-.Rapp.history
-.DS_Store
-
 # Local only folder
 /ignore-folder/
 
-.ipynb_checkpoints
-.virtual_documents
-/data/
+# Logs
+logs
+*.log
 
-/conda-env/
-requirements*
+node_modules
+dist
+dist-ssr
+*.local
 
-# knitr and R markdown default cache directories
-*_cache/
-/cache/
-
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
