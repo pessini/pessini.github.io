@@ -41,7 +41,9 @@ function App() {
                                     <div className="title-underline"></div>
                                 </div>
                                 <p className="about-text">
-                                    Former software engineer and PM turned data scientist and AI engineer — building end-to-end Machine Learning and AI solutions from raw data to real-world applications.
+                                    Former software engineer and PM, now a data scientist and AI engineer with a BSc in Computer Science 
+                                    and a postgraduate diploma in Data Science — building end-to-end 
+                                    Machine Learning and AI solutions from raw data to real-world applications.
                                 </p>
                             </div>
                         </div>
@@ -60,13 +62,13 @@ function App() {
                             {/* <div className="contact-divider"></div> */}
                             <div className="contact-item">
                                 <FaMapMarkerAlt className="contact-icon" />
-                                <span> Sao Paulo 🇧🇷 (GMT-3) </span>
+                                <span> Brazil <img src="https://cdn.jsdelivr.net/npm/flag-icons/flags/4x3/br.svg" alt="Brazil Flag" /> (GMT-3) </span>
                             </div>
                             <div className="contact-item">
                                 <FaEnvelope className="contact-icon" />
                                 <a href="mailto:leandro@pessini.me">leandro@pessini.me</a>
                             </div>
-                            {/* <div className="contact-divider"></div> */}
+                            <div className="contact-divider"></div>
                             <a href="https://www.dropbox.com/s/0khbcntugu3z5fo/Leandro-Pessini-CV-eng.pdf?dl=0" className="resume-button" target="_blank" rel="noopener noreferrer">
                                 <FaDropbox /> RESUME
                             </a>
