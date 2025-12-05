@@ -130,6 +130,29 @@
   /* Pill shape */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  /* For absolute positioning of menu */
+}
+
+.burger-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+.burger-menu-btn:hover {
+  color: var(--primary-color);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .navbar {
@@ -180,6 +203,11 @@
 .resume-btn:hover {
   background: rgba(10, 105, 109, 0.1);
   transform: translateY(-1px);
+}
+
+.mobile-resume-container {
+  display: none;
+  /* Hidden on desktop */
 }
 
 .theme-toggle {
@@ -601,6 +629,12 @@ body.dark-mode .navbar-container {
     /* Allow scroll on mobile */
   }
 
+  .main-content-wrapper,
+  .header-wrapper {
+    padding: 0 20px;
+    /* Reduce padding from 100px to 20px */
+  }
+
   .hero-section {
     flex-direction: column-reverse;
     text-align: center;
@@ -622,22 +656,129 @@ body.dark-mode .navbar-container {
 
   .hero-name {
     font-size: 1.8rem;
-    white-space: nowrap;
+    white-space: normal;
+    /* Allow wrapping */
+    word-wrap: break-word;
   }
 
   .hero-tagline {
     font-size: 1.4rem;
-    white-space: nowrap;
+    white-space: normal;
+    /* Allow wrapping */
+    word-wrap: break-word;
   }
 
   /* Navbar styles are already handled by the 1100px media query above, 
      but we can keep specific mobile adjustments if needed here */
 
   .navbar-container {
-    padding: 8px 10px;
-    /* Add horizontal padding for mobile menu */
+    padding: 8px 15px;
+    justify-content: space-between;
+    overflow-x: visible;
+    /* Disable scroll for burger menu */
+  }
+
+  .burger-menu-btn {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 120%;
+    /* Below the navbar container with some gap */
+    left: 0;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    gap: 15px;
+  }
+
+  .navbar-links.open {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .nav-item {
+    width: 100%;
     justify-content: flex-start;
-    overflow-x: auto;
+    /* Align text to left or center? Let's try left for menu feel */
+    padding: 10px 15px;
+    border-radius: 8px;
+  }
+
+  .nav-item:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  .nav-number {
+    display: inline-block;
+    /* Ensure visible */
+    margin-right: 10px;
+  }
+
+  .resume-btn {
+    display: none;
+    /* Hide in navbar on mobile */
+  }
+
+  .resume-text {
+    display: inline-block;
+    /* Ensure visible */
+  }
+
+  .mobile-resume-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .mobile-resume-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .mobile-resume-btn:hover {
+    background: rgba(10, 105, 109, 0.1);
+    transform: translateY(-2px);
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .cards-grid {

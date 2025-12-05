@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { FaBrain, FaCode, FaDatabase, FaCloud } from 'react-icons/fa';
+import { FaBrain, FaCode, FaDatabase, FaCloud, FaDropbox } from 'react-icons/fa';
 import drawingImg from '../assets/profile_pixel.png';
 
 const About = () => {
@@ -62,6 +62,17 @@ const About = () => {
                 <div className="hero-image-container">
                     <img src={drawingImg} alt="Leandro Pessini" className="hero-image" />
                 </div>
+            </div>
+
+            <div className="mobile-resume-container">
+                <a
+                    href="https://www.dropbox.com/s/0khbcntugu3z5fo/Leandro-Pessini-CV-eng.pdf?dl=0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mobile-resume-btn"
+                >
+                    <span className="resume-text">Resume</span> <FaDropbox className="btn-icon" />
+                </a>
             </div>
 
             <div className="section-header">
