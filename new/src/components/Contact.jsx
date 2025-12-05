@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaLinkedin, FaGithub, FaMedium } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
     return (
@@ -21,20 +21,9 @@ const Contact = () => {
                 </div>
 
                 <div className="contact-socials">
-                    <p className="socials-label">Or reach out to me</p>
-                    <div className="social-links-row">
-                        <a href="https://www.linkedin.com/in/leandropessini/" target="_blank" rel="noopener noreferrer" className="social-link-item">
-                            <FaLinkedin /> LinkedIn
-                        </a>
-                        <span className="separator">•</span>
-                        <a href="https://github.com/pessini" target="_blank" rel="noopener noreferrer" className="social-link-item">
-                            <FaGithub /> GitHub
-                        </a>
-                        <span className="separator">•</span>
-                        <a href="https://pessini.medium.com/" target="_blank" rel="noopener noreferrer" className="social-link-item">
-                            <FaMedium /> Medium
-                        </a>
-                    </div>
+                    <p className="socials-label">
+                        Or reach out to me on <a href="https://www.linkedin.com/in/leandropessini/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+                    </p>
                 </div>
             </div>
         </div>

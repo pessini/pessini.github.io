@@ -1164,6 +1164,14 @@ body.dark-mode .project-tag {
   margin: 0;
 }
 
+.socials-label a {
+  text-decoration: none;
+}
+
+.socials-label a:hover {
+  color: var(--primary-color);
+}
+
 .social-links-row {
   display: flex;
   align-items: center;
