@@ -64,7 +64,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="mobile-resume-container">
+            {/* <div className="mobile-resume-container">
                 <a
                     href="https://www.dropbox.com/s/0khbcntugu3z5fo/Leandro-Pessini-CV-eng.pdf?dl=0"
                     target="_blank"
@@ -73,7 +73,7 @@ const About = () => {
                 >
                     <span className="resume-text">Resume</span> <FaDropbox className="btn-icon" />
                 </a>
-            </div>
+            </div> */}
 
             <div className="section-header">
                 <h1>Tech Skills</h1>

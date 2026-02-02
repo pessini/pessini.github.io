@@ -68,10 +68,10 @@ function App() {
                                 <FaEnvelope className="contact-icon" />
                                 <a href="mailto:leandro@pessini.me">leandro@pessini.me</a>
                             </div>
-                            <div className="contact-divider"></div>
+                            {/* <div className="contact-divider"></div>
                             <a href="https://www.dropbox.com/s/0khbcntugu3z5fo/Leandro-Pessini-CV-eng.pdf?dl=0" className="resume-button" target="_blank" rel="noopener noreferrer">
                                 <FaDropbox /> RESUME
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                 </div>
