@@ -41,7 +41,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                     ))}
                 </div>
 
-                <a
+                {/* <a
                     href="https://www.dropbox.com/s/0khbcntugu3z5fo/Leandro-Pessini-CV-eng.pdf?dl=0"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -49,7 +49,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                     onClick={closeMenu}
                 >
                     <span className="resume-text">Resume</span> <FaDropbox className="btn-icon" />
-                </a>
+                </a> */}
             </div>
 
             <button className="theme-toggle" onClick={toggleDarkMode} aria-label="Toggle Dark Mode">

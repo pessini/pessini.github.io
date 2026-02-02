@@ -59,7 +59,7 @@ function App() {
                                 <a href="https://github.com/pessini" target="_blank" className="contact-social-link"><FaGithub /></a>
                                 <a href="https://pessini.medium.com/" target="_blank" className="contact-social-link"><FaMedium /></a>
                             </div>
-                            {/* <div className="contact-divider"></div> */}
+                            <div className="contact-divider"></div>
                             <div className="contact-item">
                                 <FaMapMarkerAlt className="contact-icon" />
                                 <span> Brazil <img src="https://cdn.jsdelivr.net/npm/flag-icons/flags/4x3/br.svg" alt="Brazil Flag" /> (GMT-3) </span>
