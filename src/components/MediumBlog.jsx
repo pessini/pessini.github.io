@@ -7,6 +7,33 @@ const RSS2JSON_URL = API_KEY
     ? `https://api.rss2json.com/v1/api.json?rss_url=${MEDIUM_FEED}&api_key=${API_KEY}`
     : `https://api.rss2json.com/v1/api.json?rss_url=${MEDIUM_FEED}`;
 
+// Cache configuration
+const CACHE_KEY = 'medium_blog_cache';
+const CACHE_TTL = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
+
+function getCachedArticles() {
+    try {
+        const cached = localStorage.getItem(CACHE_KEY);
+        if (!cached) return null;
+        const { timestamp, articles } = JSON.parse(cached);
+        if (Date.now() - timestamp < CACHE_TTL) return articles;
+    } catch {
+        // Corrupted cache or localStorage unavailable
+    }
+    return null;
+}
+
+function setCachedArticles(articles) {
+    try {
+        localStorage.setItem(CACHE_KEY, JSON.stringify({
+            timestamp: Date.now(),
+            articles,
+        }));
+    } catch {
+        // localStorage full or unavailable — silently ignore
+    }
+}
+
 // Strip HTML tags and extract plain text excerpt
 function extractExcerpt(htmlString, maxLength = 150) {
     const doc = new DOMParser().parseFromString(htmlString, 'text/html');
@@ -38,12 +65,22 @@ const MediumBlog = () => {
 
     useEffect(() => {
         const fetchArticles = async () => {
+            // Check cache first
+            const cached = getCachedArticles();
+            if (cached) {
+                setArticles(cached);
+                setLoading(false);
+                return;
+            }
+
+            // Cache miss or expired — fetch fresh
             try {
                 const response = await fetch(RSS2JSON_URL);
                 if (!response.ok) throw new Error('Failed to fetch articles');
                 const data = await response.json();
                 if (data.status !== 'ok') throw new Error('RSS feed error');
                 setArticles(data.items);
+                setCachedArticles(data.items);
             } catch (err) {
                 setError(err.message);
             } finally {
