@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { FaExternalLinkAlt, FaCalendarAlt } from 'react-icons/fa';
 
+// ── Configuration ────────────────────────────────────────────────
 const MEDIUM_FEED = 'https://medium.com/feed/@pessini';
+const MAX_ARTICLES = 4;                          // Max articles to display
+const CACHE_KEY = 'medium_blog_cache';
+const CACHE_TTL = 7 * 24 * 60 * 60 * 1000;      // Cache duration (7 days)
+// ─────────────────────────────────────────────────────────────────
+
 const API_KEY = import.meta.env.VITE_RSS2JSON_API_KEY;
 const RSS2JSON_URL = API_KEY
     ? `https://api.rss2json.com/v1/api.json?rss_url=${MEDIUM_FEED}&api_key=${API_KEY}`
     : `https://api.rss2json.com/v1/api.json?rss_url=${MEDIUM_FEED}`;
-
-// Cache configuration
-const CACHE_KEY = 'medium_blog_cache';
-const CACHE_TTL = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
 
 function getCachedArticles() {
     try {
@@ -129,7 +131,7 @@ const MediumBlog = () => {
                 <div className="title-underline"></div>
             </div>
             <div className="blog-grid">
-                {articles.map((article) => {
+                {articles.slice(0, MAX_ARTICLES).map((article) => {
                     const thumbnail = article.thumbnail || extractFirstImage(article.content || article.description);
                     return (
                         <a
