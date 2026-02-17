@@ -21,6 +21,8 @@ jobs:
           node-version: 20
       
       - name: Install and build root app
+        env:
+          VITE_RSS2JSON_API_KEY: ${{ secrets.VITE_RSS2JSON_API_KEY }}
         run: |
           npm install
           npm run build

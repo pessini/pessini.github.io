@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaLinkedin, FaGithub, FaMedium, FaEnvelope, FaMapMarkerAlt, FaDropbox } from 'react-icons/fa';
 import TypingAnimation from './components/TypingAnimation';
 import TechSkills from './components/TechSkills';
+import MediumBlog from './components/MediumBlog';
 import drawingImg from './assets/profile_pixel.png';
 
 function App() {
@@ -78,6 +79,9 @@ function App() {
 
                 {/* Tech Skills */}
                 <TechSkills />
+
+                {/* Blog */}
+                <MediumBlog />
 
                 {/* Footer */}
                 <div className="footer-section">
