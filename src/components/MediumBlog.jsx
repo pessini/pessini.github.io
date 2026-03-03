@@ -39,6 +39,7 @@ function setCachedArticles(articles) {
 // Strip HTML tags and extract plain text excerpt
 function extractExcerpt(htmlString, maxLength = 150) {
     const doc = new DOMParser().parseFromString(htmlString, 'text/html');
+    doc.querySelectorAll('figcaption').forEach((el) => el.remove());
     const text = doc.body.textContent || '';
     if (text.length <= maxLength) return text;
     return text.substring(0, maxLength).trimEnd() + '...';
