@@ -496,18 +496,11 @@ body.dark-mode .resume-button:hover {
     padding: 0.25rem 0.6rem;
 }
 
-.blog-card-excerpt {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    flex: 1;
-}
-
 .blog-card-link {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
+    margin-top: auto;
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--accent-color);
