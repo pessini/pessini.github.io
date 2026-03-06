@@ -6,6 +6,7 @@ const MEDIUM_FEED = 'https://medium.com/feed/@pessini';
 const MAX_ARTICLES = 4;                          // Max articles to display
 const CACHE_KEY = 'medium_blog_cache';
 const CACHE_TTL = 7 * 24 * 60 * 60 * 1000;      // Cache duration (7 days)
+const FETCH_TIMEOUT = 8000;                       // Fetch timeout (8 seconds)
 // ─────────────────────────────────────────────────────────────────
 
 const API_KEY = import.meta.env.VITE_RSS2JSON_API_KEY;
@@ -58,30 +59,44 @@ const MediumBlog = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), FETCH_TIMEOUT);
+
         const fetchArticles = async () => {
             // Check cache first
             const cached = getCachedArticles();
             if (cached) {
                 setArticles(cached);
                 setLoading(false);
+                clearTimeout(timeoutId);
                 return;
             }
 
             // Cache miss or expired — fetch fresh
             try {
-                const response = await fetch(RSS2JSON_URL);
+                const response = await fetch(RSS2JSON_URL, { signal: controller.signal });
                 if (!response.ok) throw new Error('Failed to fetch articles');
                 const data = await response.json();
                 if (data.status !== 'ok') throw new Error('RSS feed error');
                 setArticles(data.items);
                 setCachedArticles(data.items);
             } catch (err) {
-                setError(err.message);
+                if (err.name === 'AbortError') {
+                    setError('Request timed out');
+                } else {
+                    setError(err.message);
+                }
             } finally {
+                clearTimeout(timeoutId);
                 setLoading(false);
             }
         };
         fetchArticles();
+
+        return () => {
+            controller.abort();
+            clearTimeout(timeoutId);
+        };
     }, []);
 
     if (loading) {
